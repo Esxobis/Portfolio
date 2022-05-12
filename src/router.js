@@ -1,12 +1,22 @@
-import { createRouter, createWebHistory } from "vue-router/dist/vue-router.esm-bundler";
+import Vue from "vue";
+import Router from "vue-router";
 import Portfolio from "./pages/portfolio.vue";
 import Information from "./pages/information.vue";
 
-const routes = [{ path: "/", name: "profile", component: Portfolio },
-{ path: "/contact", name: "contact", component: Information }
-];
+Vue.use(Router);
 
-export default createRouter({
-  history: createWebHistory(),
-  routes
+export default new Router({
+  mode: "history",
+  routes: [
+    {
+      path: "/",
+      name: "profile",
+      component: Portfolio
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: Information
+    }
+  ]
 });

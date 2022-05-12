@@ -10,6 +10,7 @@
       <h1>My Profile</h1>
       <img class="image" src="../assets/user.png" />
       <br />
+      <br />
     </div>
     <div class="content">
       <li><b>Name :</b> {{ profile.name }}</li>
